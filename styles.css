@@ -1,0 +1,1419 @@
+/* ============================================================
+   DEPILACIÓN LASER MALDONADO — styles.css
+   ============================================================ */
+
+/* ======================== VARIABLES ======================== */
+:root {
+    --primary:       #779788;
+    --primary-dark:  #5d7d6e;
+    --primary-light: #e8f0eb;
+    --bg:            #FFFEFF;
+    --bg-alt:        #f4f8f6;
+    --black:         #1a1a1a;
+    --dark:          #2c2c2c;
+    --text:          #3a3a3a;
+    --text-light:    #748a7e;
+    --white:         #ffffff;
+    --shadow:        0 4px 24px rgba(119,151,136,0.12);
+    --shadow-hover:  0 10px 42px rgba(119,151,136,0.28);
+    --radius:        16px;
+    --radius-sm:     10px;
+    --transition:    0.3s ease;
+    --nav-height:    72px;
+}
+
+/* ======================== RESET ======================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ======================== TIPOGRAFÍAS MARCA ======================== */
+.brand-title {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.brand-sub {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+/* ======================== SCROLL REVEAL ======================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======================== UTILITIES ======================== */
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.section {
+    padding: 84px 0;
+}
+
+.section-alt {
+    background: var(--bg-alt);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.section-header h2 {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+}
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--primary);
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 0.97rem;
+    color: var(--text-light);
+    font-weight: 300;
+    margin-top: 6px;
+}
+
+.section-tagline {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 14px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 34px;
+    border-radius: 50px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ======================== NAVBAR ======================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background: #FFFEFF;
+    border-bottom: 1px solid rgba(119,151,136,0.2);
+    z-index: 1000;
+    transition: box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo tipográfico */
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 1px;
+}
+
+.logo-line1 {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.18rem;
+    color: var(--black);
+    letter-spacing: 0.01em;
+}
+
+.logo-line2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--black);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ======================== HERO (VIDEO) ======================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-video-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-video-wrap video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 30, 20, 0.58);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: calc(var(--nav-height) + 32px) 24px 48px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.hero-label {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: rgba(255,255,255,0.88);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+}
+
+.hero h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    color: var(--white);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-slogan {
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    color: rgba(255,255,255,0.78);
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 0.04em;
+}
+
+/* ======================== SERVICIOS — INFO ======================== */
+.services-info {
+    background: var(--bg-alt);
+    border: 1px solid rgba(119,151,136,0.2);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 52px;
+    font-size: 0.96rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.services-info strong {
+    color: var(--primary-dark);
+}
+
+.services-discount-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    letter-spacing: 0.02em;
+}
+
+.badge i {
+    font-size: 0.88rem;
+}
+
+/* ======================== GRID DE ZONAS ======================== */
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+    margin-bottom: 64px;
+}
+
+.zone-card {
+    background: var(--white);
+    border: 1px solid rgba(119,151,136,0.22);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.zone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.zone-img-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--bg-alt);
+}
+
+.zone-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.zone-card:hover .zone-img-wrap img {
+    transform: scale(1.05);
+}
+
+.zone-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-light), #d0e4da);
+    color: var(--primary);
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.zone-info {
+    padding: 16px 18px 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.zone-info h3 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.3;
+}
+
+.zone-info p {
+    font-size: 0.83rem;
+    color: var(--text-light);
+    line-height: 1.55;
+    flex: 1;
+}
+
+.zone-price {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 4px;
+}
+
+.zone-card .card-link {
+    display: block;
+    text-align: right;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 8px 18px 12px;
+    letter-spacing: 0.04em;
+    transition: letter-spacing var(--transition);
+}
+
+.zone-card:hover .card-link {
+    letter-spacing: 0.08em;
+}
+
+/* ======================== PROMOS ======================== */
+.promos-section {
+    margin-bottom: 64px;
+}
+
+.promos-title {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.promos-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.promos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.promo-card {
+    background: var(--white);
+    border: 1.5px solid rgba(119,151,136,0.3);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.promo-card--featured {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.promo-card--featured h4,
+.promo-card--featured p,
+.promo-card--featured .promo-price {
+    color: var(--white);
+}
+
+.promo-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.28);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+    align-self: center;
+}
+
+.promo-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-bottom: 4px;
+}
+
+.promo-card--featured .promo-icon {
+    background: rgba(255,255,255,0.2);
+    color: var(--white);
+}
+
+.promo-card h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.promo-card p {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.promo-price {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 4px;
+}
+
+/* ======================== CARRUSEL DE IMÁGENES ======================== */
+.img-carousel-section {
+    margin-bottom: 16px;
+}
+
+.img-carousel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.img-carousel-track-wrap {
+    flex: 1;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-alt);
+    aspect-ratio: 4/3;
+    max-height: 520px;
+}
+
+.img-carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+
+.img-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.img-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: var(--bg-alt);
+    display: block;
+}
+
+.img-carousel-btn {
+    background: var(--white);
+    border: 1px solid rgba(119,151,136,0.3);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.img-carousel-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.img-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(119,151,136,0.3);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    border: none;
+    padding: 0;
+}
+
+.dot.active {
+    background: var(--primary);
+    transform: scale(1.35);
+}
+
+/* ======================== MODAL ZONAS ======================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 35, 25, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    transform: scale(0.92) translateY(24px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--bg-alt);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--text);
+    transition: background var(--transition), color var(--transition);
+    flex-shrink: 0;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.modal-price-badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+}
+
+#modalTitle {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: clamp(1.45rem, 3vw, 1.85rem);
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 22px;
+    line-height: 1.25;
+}
+
+.modal-content-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.modal-section h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.modal-section p {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.75;
+}
+
+.modal-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.modal-col {
+    background: var(--bg-alt);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+}
+
+.modal-col h4 {
+    margin-bottom: 6px;
+}
+
+.modal-col p {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.65;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+}
+
+.btn-whatsapp i {
+    font-size: 1.2rem;
+}
+
+/* ======================== NOSOTROS ======================== */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.team-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    box-shadow: 0 6px 28px rgba(119,151,136,0.25);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.04);
+    box-shadow: 0 10px 40px rgba(119,151,136,0.38);
+}
+
+.team-name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+}
+
+.about-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-bio {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.85;
+}
+
+.about-bio strong {
+    color: var(--primary-dark);
+}
+
+/* ======================== CONTACTO ======================== */
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 44px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    border: 1px solid rgba(119,151,136,0.2);
+    border-radius: var(--radius);
+    padding: 26px 20px;
+    width: 175px;
+    min-width: 0;
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+a.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.contact-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background: var(--primary-light);
+    color: var(--primary);
+    transition: background var(--transition), color var(--transition);
+    flex-shrink: 0;
+}
+
+a.contact-card:hover .contact-icon {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.contact-card.whatsapp .contact-icon  { background: #e7f9ef; color: #25D366; }
+.contact-card.instagram .contact-icon { background: #fce4ec; color: #C13584; }
+.contact-card.facebook .contact-icon  { background: #e8f0fb; color: #1877F2; }
+
+a.contact-card.whatsapp:hover .contact-icon  { background: #25D366; color: #fff; }
+a.contact-card.instagram:hover .contact-icon { background: #C13584; color: #fff; }
+a.contact-card.facebook:hover .contact-icon  { background: #1877F2; color: #fff; }
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.contact-value {
+    font-size: 0.85rem;
+    color: var(--black);
+    font-weight: 500;
+    line-height: 1.4;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--bg-alt);
+    color: var(--text);
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 50px;
+    transition: background var(--transition), color var(--transition);
+}
+
+a.contact-card:hover .contact-btn {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.contact-card.whatsapp .contact-btn  { background: #e7f9ef; color: #25D366; }
+.contact-card.instagram .contact-btn { background: #fce4ec; color: #C13584; }
+.contact-card.facebook .contact-btn  { background: #e8f0fb; color: #1877F2; }
+
+a.contact-card.whatsapp:hover .contact-btn  { background: #25D366; color: #fff; }
+a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; }
+a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; }
+
+/* Schedule bar */
+.schedule-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px 28px;
+    background: var(--white);
+    border: 1px solid rgba(119,151,136,0.2);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    margin-bottom: 36px;
+    box-shadow: var(--shadow);
+}
+
+.schedule-bar-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.84rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.schedule-bar-title i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.schedule-days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    flex: 1;
+}
+
+.schedule-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    background: var(--bg-alt);
+    border-radius: var(--radius-sm);
+    padding: 10px 13px;
+    min-width: 74px;
+    text-align: center;
+}
+
+.sday-name {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sday-hours {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.schedule-day--closed .sday-hours {
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.schedule-day--closed {
+    opacity: 0.5;
+}
+
+/* Map */
+.map-wrap {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(119,151,136,0.18);
+}
+
+.map-wrap iframe {
+    display: block;
+}
+
+/* ======================== FOOTER ======================== */
+.footer {
+    background: var(--black);
+    color: rgba(255,255,255,0.65);
+    padding: 52px 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 36px;
+    max-width: 100%;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 260px;
+}
+
+.footer-logo-link {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1;
+}
+
+.footer-logo-line1 {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.01em;
+}
+
+.footer-logo-line2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.footer-slogan {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.42);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    transition: color var(--transition);
+    letter-spacing: 0.03em;
+}
+
+.footer-nav a:hover {
+    color: var(--primary);
+}
+
+/* ======================== WHATSAPP FAB ======================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.55rem;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform var(--transition), box-shadow var(--transition);
+    animation: pulse-wpp 2.5s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.65);
+    animation: none;
+}
+
+@keyframes pulse-wpp {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.12); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* ---- 960px ---- */
+@media (max-width: 960px) {
+    .section {
+        padding: 64px 0;
+    }
+
+    .zones-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+
+    .footer-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 24px;
+    }
+}
+
+/* ---- 660px ---- */
+@media (max-width: 660px) {
+    /* Hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: rgba(255,254,255,0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        border-bottom: 1px solid rgba(119,151,136,0.2);
+    }
+
+    .nav-links.open {
+        max-height: 260px;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 14px 0;
+        font-size: 0.95rem;
+        border-bottom: none;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: clamp(1.8rem, 9vw, 2.8rem);
+        letter-spacing: 0.1em;
+    }
+
+    .hero-label {
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
+    }
+
+    /* Services info */
+    .services-info {
+        padding: 20px;
+    }
+
+    .services-discount-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Zonas grid */
+    .zones-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* Promos grid */
+    .promos-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    /* Image carousel buttons hidden on mobile (swipe only) */
+    .img-carousel-btn {
+        display: none;
+    }
+
+    /* Modal from bottom */
+    .modal-overlay {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .modal {
+        border-radius: var(--radius) var(--radius) 0 0;
+        max-height: 88vh;
+        padding: 8px 20px 28px;
+        transform: translateY(100%);
+    }
+
+    .modal-overlay.active .modal {
+        transform: translateY(0);
+    }
+
+    /* Drag handle */
+    .modal::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: rgba(0,0,0,0.1);
+        border-radius: 2px;
+        margin: 8px auto 14px;
+    }
+
+    #modalTitle {
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+    }
+
+    .modal-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+    }
+
+    /* Team */
+    .team-grid {
+        gap: 32px;
+    }
+
+    /* Contact cards 2 columns */
+    .contact-grid {
+        gap: 12px;
+    }
+
+    .contact-card {
+        width: calc(50% - 6px);
+        min-width: 140px;
+    }
+
+    /* Schedule bar mobile: lista vertical */
+    .schedule-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .schedule-bar-title {
+        justify-content: center;
+    }
+
+    .schedule-days {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .schedule-day {
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: unset;
+        padding: 9px 14px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 24px;
+    }
+}
+
+/* ---- 440px ---- */
+@media (max-width: 440px) {
+    .zones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+        letter-spacing: 0.06em;
+    }
+
+    .hero-label {
+        font-size: 1rem;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modal {
+        padding: 8px 16px 24px;
+    }
+
+    .modal-price-badge {
+        font-size: 0.78rem;
+    }
+
+    #modalTitle {
+        font-size: 1.18rem;
+    }
+}

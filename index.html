@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depilación Laser Maldonado - Tu piel suave comienza aquí</title>
+    <meta name="description" content="Depilación laser definitiva en Maldonado, Uruguay. Más de 9 años de experiencia. Equipos de última generación aprobados por el MSP. Técnicas para mujer y hombre.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <span class="logo-line1">Depilación laser</span>
+                <span class="logo-line2">Maldonado</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Depilación Láser</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-video-wrap">
+            <video autoplay muted loop playsinline>
+                <source src="img/video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content reveal">
+            <p class="hero-label">Depilación laser</p>
+            <h1>Maldonado</h1>
+            <p class="hero-slogan">Tu piel suave comienza aquí</p>
+            <a href="#contacto" class="btn-primary">Reservá tu turno</a>
+        </div>
+    </section>
+
+    <!-- ======================== SERVICIOS ======================== -->
+    <section class="section" id="servicios">
+        <div class="container">
+
+            <!-- INFO GENERAL -->
+            <div class="section-header reveal">
+                <h2>Depilación Láser</h2>
+                <p>Tratamiento definitivo · 6 a 9 sesiones · 1 vez al mes</p>
+            </div>
+
+            <div class="services-info reveal">
+                <p>
+                    La depilación láser es un tratamiento que lleva de <strong>6 a 9 sesiones</strong>, las cuales se realizan
+                    <strong>1 vez al mes</strong>, eliminando el vello definitivamente luego de finalizadas las sesiones necesarias.
+                    Para comenzar las sesiones debés rasurarte la zona a tratar el día antes. El pelo debe ser cortado bien al ras
+                    y <strong>no debe ser con cera ni pinza</strong> ya que debemos tener su raíz para eliminarlo.
+                </p>
+                <div class="services-discount-badges">
+                    <span class="badge"><i class="fa-solid fa-tag"></i> 3 zonas o más → 10% de descuento</span>
+                    <span class="badge"><i class="fa-solid fa-money-bill-wave"></i> Pago en efectivo → 10% adicional</span>
+                </div>
+            </div>
+
+            <!-- GRID DE ZONAS -->
+            <div class="zones-grid">
+
+                <div class="zone-card reveal" data-zone="axilas">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Axilas</h3>
+                        <p>Zona clásica para eliminar el vello de forma permanente.</p>
+                        <span class="zone-price">$700 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="media-pierna-baja">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Media pierna baja</h3>
+                        <p>Desde el tobillo hasta la rodilla, resultados visibles desde la primera sesión.</p>
+                        <span class="zone-price">$1.200 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="media-pierna-alta">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Media pierna alta</h3>
+                        <p>Desde la rodilla hasta la ingle, tratamiento preciso y sin dolor.</p>
+                        <span class="zone-price">$1.400 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="pierna-entera">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Pierna entera</h3>
+                        <p>Cobertura completa de toda la pierna, para máxima libertad.</p>
+                        <span class="zone-price">$2.500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="cavado-bikini">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Cavado bikini</h3>
+                        <p>Zona de la línea del bikini, ideal para estar siempre lista.</p>
+                        <span class="zone-price">$800 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="cavado-completo">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Cavado completo</h3>
+                        <p>Cobertura total de la zona íntima, para máxima comodidad.</p>
+                        <span class="zone-price">$1.100 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="tira-de-cola">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Tira de cola</h3>
+                        <p>Zona posterior del cavado, tratamiento técnico y preciso.</p>
+                        <span class="zone-price">$650 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="gluteos">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Glúteos</h3>
+                        <p>Eliminación del vello en la zona de los glúteos de forma definitiva.</p>
+                        <span class="zone-price">$1.000 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="manos">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Manos</h3>
+                        <p>Zona de dedos y dorso de manos, detalle perfecto.</p>
+                        <span class="zone-price">$500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="pies">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Pies</h3>
+                        <p>Tratamiento de dedos y dorso de los pies para un acabado impecable.</p>
+                        <span class="zone-price">$500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="brazo-medio">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Brazo medio</h3>
+                        <p>Desde el codo hasta la muñeca, resultados suaves y duraderos.</p>
+                        <span class="zone-price">$800 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="brazo-entero">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Brazo entero</h3>
+                        <p>Cobertura completa del brazo, desde el hombro hasta la muñeca.</p>
+                        <span class="zone-price">$1.200 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="cuello">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Cuello</h3>
+                        <p>Anterior o posterior, eliminación precisa del vello del cuello.</p>
+                        <span class="zone-price">$750 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="nuca">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Nuca</h3>
+                        <p>Zona posterior del cuello, prolija y sin mantenimiento.</p>
+                        <span class="zone-price">$650 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="espalda-media">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Espalda media</h3>
+                        <p>Zona lumbar y media espalda, tratamiento efectivo y cómodo.</p>
+                        <span class="zone-price">$1.400 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="espalda-completa">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Espalda completa</h3>
+                        <p>Cobertura total de la espalda, de hombros a lumbares.</p>
+                        <span class="zone-price">$2.100 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="pecho">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Pecho</h3>
+                        <p>Zona pectoral completa, resultados notorios desde la primera sesión.</p>
+                        <span class="zone-price">$1.400 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="abdomen">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Abdomen</h3>
+                        <p>Línea alba y zona abdominal, tratamiento preciso y definitivo.</p>
+                        <span class="zone-price">$1.200 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="barba">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Barba</h3>
+                        <p>Zona de la barba para hombre, contorno y modelado definitivos.</p>
+                        <span class="zone-price">$1.600 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="cabeza">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Cabeza</h3>
+                        <p>Tratamiento completo del cuero cabelludo para reducción capilar.</p>
+                        <span class="zone-price">$1.800 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="bozo">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Bozo</h3>
+                        <p>Zona del labio superior, discreta y efectiva para rostro femenino y masculino.</p>
+                        <span class="zone-price">$500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="menton">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Mentón</h3>
+                        <p>Eliminación del vello del mentón, resultado limpio y duradero.</p>
+                        <span class="zone-price">$500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="patillas">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Patillas</h3>
+                        <p>Zona lateral del rostro, contorno preciso y elegante.</p>
+                        <span class="zone-price">$650 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="pomulos">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Pómulos</h3>
+                        <p>Área de los pómulos, para un rostro limpio y uniforme.</p>
+                        <span class="zone-price">$650 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="entrecejo">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Entrecejo</h3>
+                        <p>Zona del entrecejo, define la mirada sin necesidad de depilar con cera.</p>
+                        <span class="zone-price">$500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="zone-card reveal" data-zone="frente">
+                    <div class="zone-img-wrap">
+                        <div class="zone-img-placeholder"><i class="fa-solid fa-star-of-life"></i></div>
+                    </div>
+                    <div class="zone-info">
+                        <h3>Frente</h3>
+                        <p>Línea de nacimiento del cabello y frente, acabado prolijo y permanente.</p>
+                        <span class="zone-price">$500 / sesión</span>
+                    </div>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+            </div><!-- /zones-grid -->
+
+            <!-- PROMOS -->
+            <div class="promos-section reveal">
+                <h3 class="promos-title">Promociones especiales</h3>
+                <div class="promos-grid">
+                    <div class="promo-card">
+                        <div class="promo-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>Promo 1</h4>
+                        <p>Axilas + Media pierna + Cavado bikini</p>
+                        <span class="promo-price">$2.400</span>
+                    </div>
+                    <div class="promo-card promo-card--featured">
+                        <div class="promo-badge">Más elegida</div>
+                        <div class="promo-icon"><i class="fa-solid fa-fire"></i></div>
+                        <h4>Promo 2</h4>
+                        <p>Axilas + Pierna entera + Cavado completo</p>
+                        <span class="promo-price">$3.900</span>
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-icon"><i class="fa-solid fa-face-smile"></i></div>
+                        <h4>Promo 3</h4>
+                        <p>Cara completa · 4 zonas</p>
+                        <span class="promo-price">$1.600</span>
+                    </div>
+                </div>
+            </div><!-- /promos-section -->
+
+        </div>
+    </section>
+
+    <!-- ======================== MODAL ZONAS ======================== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-price-badge" id="modalPriceBadge"></div>
+                <h3 id="modalTitle"></h3>
+                <div class="modal-content-sections">
+                    <div class="modal-section">
+                        <h4><i class="fa-solid fa-circle-info"></i> Descripción</h4>
+                        <p id="modalDesc"></p>
+                    </div>
+                    <div class="modal-section modal-cols">
+                        <div class="modal-col">
+                            <h4><i class="fa-solid fa-venus"></i> Mujer</h4>
+                            <p id="modalWoman"></p>
+                        </div>
+                        <div class="modal-col">
+                            <h4><i class="fa-solid fa-mars"></i> Hombre</h4>
+                            <p id="modalMan"></p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <h4><i class="fa-solid fa-clipboard-list"></i> Preparación</h4>
+                        <p id="modalPrep"></p>
+                    </div>
+                </div>
+                <a href="#" class="btn-primary btn-whatsapp" id="modalCTA" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Consulta
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== NOSOTROS ======================== -->
+    <section class="section section-alt" id="nosotros">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Depilación Laser Maldonado</h2>
+                <p>Profesionalismo, experiencia y resultados garantizados</p>
+            </div>
+
+            <div class="team-grid reveal">
+                <div class="team-member">
+                    <img src="img/sab.png" alt="Sabrina - Técnica en depilación laser" class="team-photo">
+                    <span class="team-name">Sabrina</span>
+                </div>
+                <div class="team-member">
+                    <img src="img/eze.png" alt="Ezequiel - Técnico en depilación laser masculina" class="team-photo">
+                    <span class="team-name">Ezequiel</span>
+                </div>
+            </div>
+
+            <div class="about-content reveal">
+                <p class="about-bio">
+                    Somos un centro de estética con más de <strong>9 años de experiencia</strong> dedicados a la
+                    atención personalizada y resultados garantizados.
+                </p>
+                <p class="about-bio">
+                    Trabajamos con <strong>equipos de última generación</strong> aprobados por el
+                    Ministerio de Salud Pública y avalados por la Unión Europea.
+                </p>
+                <p class="about-bio">
+                    Contamos con técnicas especializadas para depilación femenina y con el
+                    <strong>único técnico capacitado especialmente para la depilación masculina en Maldonado</strong>.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== CONTACTO ======================== -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Contacto</h2>
+                <p>Estamos en Maldonado, esperándote</p>
+                <p class="section-tagline">¡El momento es ahora!<br>Depilación laser Maldonado te va a cambiar la vida!</p>
+            </div>
+
+            <div class="contact-grid reveal">
+
+                <a href="tel:091504410" class="contact-card phone">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Llamadas</span>
+                        <span class="contact-value">091 504 410</span>
+                    </div>
+                    <span class="contact-btn">Llamar</span>
+                </a>
+
+                <a href="https://wa.me/59891504410" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp">
+                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">091 504 410</span>
+                    </div>
+                    <span class="contact-btn">Escribir</span>
+                </a>
+
+                <a href="https://www.instagram.com/depilacion_laser_maldonado/" target="_blank" rel="noopener noreferrer" class="contact-card instagram">
+                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Instagram</span>
+                        <span class="contact-value">@depilacion_laser_maldonado</span>
+                    </div>
+                    <span class="contact-btn">Seguir</span>
+                </a>
+
+                <a href="https://www.facebook.com/Cartelesydecoracionparafiestas" target="_blank" rel="noopener noreferrer" class="contact-card facebook">
+                    <div class="contact-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Facebook</span>
+                        <span class="contact-value">Depilación Laser Maldonado</span>
+                    </div>
+                    <span class="contact-btn">Visitar</span>
+                </a>
+
+                <div class="contact-card address">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Dirección</span>
+                        <span class="contact-value">Garzas y, 20000 Maldonado<br>Departamento de Maldonado</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- HORARIOS -->
+            <div class="schedule-bar reveal">
+                <div class="schedule-bar-title">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Horarios de atención</span>
+                </div>
+                <div class="schedule-days">
+                    <div class="schedule-day">
+                        <span class="sday-name">Lunes</span>
+                        <span class="sday-hours">15:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Martes</span>
+                        <span class="sday-hours">9:00 — 18:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Miércoles</span>
+                        <span class="sday-hours">9:00 — 18:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Jueves</span>
+                        <span class="sday-hours">9:00 — 18:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Viernes</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Sábado</span>
+                        <span class="sday-hours">9:00 — 18:00</span>
+                    </div>
+                    <div class="schedule-day schedule-day--closed">
+                        <span class="sday-name">Domingo</span>
+                        <span class="sday-hours">Cerrado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAPA -->
+            <div class="map-wrap reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=-34.9008564,-54.9701266&z=16&output=embed"
+                    width="100%"
+                    height="380"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Depilación Laser Maldonado en Google Maps">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <a href="#inicio" class="footer-logo-link">
+                <span class="footer-logo-line1">Depilación laser</span>
+                <span class="footer-logo-line2">Maldonado</span>
+            </a>
+            <span class="footer-slogan">Tu piel suave comienza aquí</span>
+        </div>
+        <nav class="footer-nav" aria-label="Navegación del footer">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Depilación Láser</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- ======================== WHATSAPP FAB ======================== -->
+    <a href="https://wa.me/59891504410" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
