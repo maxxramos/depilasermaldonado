@@ -1565,9 +1565,34 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
 }
 
 /* ======================== NAVBAR SEARCH — RESPONSIVE ======================== */
+
+/* Tablet: caja un poco más angosta */
+@media (max-width: 960px) {
+    .nav-search-box {
+        width: 260px;
+    }
+}
+
+/* Mobile: anclar al viewport con position fixed para evitar desbordamiento */
 @media (max-width: 660px) {
     .nav-search-box {
-        width: calc(100vw - 32px);
-        max-width: 320px;
+        position: fixed;
+        top: var(--nav-height);
+        left: 16px;
+        right: 16px;
+        width: auto;
+        max-width: none;
+        /* resetear el transform de cierre para eje Y relativo al viewport */
+        transform: translateY(-6px);
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-search.open .nav-search-box {
+        transform: translateY(0);
+    }
+
+    /* Limitar la lista de resultados en pantallas bajas */
+    .nav-search-results {
+        max-height: 46vh;
     }
 }
