@@ -1459,9 +1459,27 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
     .modal {
         border-radius: var(--radius) var(--radius) 0 0;
         max-height: 88vh;
-        padding: 8px 20px 28px;
+        padding: 0;
         margin-bottom: 5px;
         transform: translateY(100%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-body {
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 8px 20px 16px;
+    }
+
+    .btn-whatsapp {
+        position: sticky;
+        bottom: 0;
+        margin: 0;
+        border-radius: 0;
+        padding: 16px 24px;
+        flex-shrink: 0;
     }
 
     .modal-overlay.active .modal {
