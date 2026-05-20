@@ -302,7 +302,7 @@ ul {
 .hero-label {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
-    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
     font-weight: 700;
     color: rgba(255,255,255,0.88);
     display: block;
@@ -313,7 +313,7 @@ ul {
 .hero h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
-    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.9rem);
     color: var(--white);
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -854,6 +854,7 @@ ul {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+    width: 100%;
 }
 
 .team-photo {
@@ -864,6 +865,14 @@ ul {
     border: 3px solid var(--primary);
     box-shadow: 0 6px 28px rgba(119,151,136,0.25);
     transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.team-photo--wide {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: var(--radius);
 }
 
 .team-member:hover .team-photo {
@@ -1405,12 +1414,12 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
 
     /* Hero */
     .hero h1 {
-        font-size: clamp(1.8rem, 9vw, 2.8rem);
+        font-size: clamp(0.9rem, 3.5vw, 1.4rem);
         letter-spacing: 0.1em;
     }
 
     .hero-label {
-        font-size: clamp(1.1rem, 4vw, 1.5rem);
+        font-size: clamp(2rem, 9vw, 3rem);
     }
 
     /* Services info */
@@ -1451,6 +1460,7 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
         border-radius: var(--radius) var(--radius) 0 0;
         max-height: 88vh;
         padding: 8px 20px 28px;
+        margin-bottom: 5px;
         transform: translateY(100%);
     }
 
@@ -1538,15 +1548,15 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
     }
 
     .hero h1 {
-        font-size: 1.9rem;
+        font-size: 1rem;
         letter-spacing: 0.06em;
     }
 
     .hero-label {
-        font-size: 1rem;
+        font-size: 2.2rem;
     }
 
-    .team-photo {
+    .team-photo:not(.team-photo--wide) {
         width: 120px;
         height: 120px;
     }

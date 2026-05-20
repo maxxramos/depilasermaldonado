@@ -156,14 +156,6 @@ const zoneData = {
         man: 'Permite definir el perfil de la barba con absoluta precisión. Los resultados son permanentes y naturales. Se puede modelar completamente a gusto del cliente.',
         prep: 'Dejá crecer la barba al menos 2 días antes para poder afeitar al ras el día anterior. Llegá con la zona limpia y sin aftershave.'
     },
-    'cabeza': {
-        title: 'Cabeza',
-        price: '$1.800',
-        fullDesc: 'El tratamiento capilar de cabeza permite reducir el cabello o tratar zonas específicas del cuero cabelludo. Es un procedimiento especializado que requiere técnica precisa. Ideal para quienes usan rasurado al cero o desean reducir zonas específicas.',
-        woman: 'Se aplica en casos específicos como reducción de entradas, línea de implantación irregular o zonas puntuales de exceso.',
-        man: 'Muy utilizado por hombres que llevan la cabeza rasurada y desean reducir el ritmo de crecimiento o eliminar el vello de forma definitiva.',
-        prep: 'Rasurá la cabeza completamente el día anterior al ras. Llegá con la zona limpia. El especialista evaluará la densidad y grosor capilar antes de la sesión.'
-    },
     'bozo': {
         title: 'Bozo',
         price: '$500',
@@ -290,7 +282,7 @@ function openModal(zoneKey) {
     modalDesc.textContent       = data.fullDesc;
     modalWoman.textContent      = data.woman;
     modalMan.textContent        = data.man;
-    modalPrep.textContent       = data.prep;
+    modalPrep.textContent       = 'Razura la zona el dia anterior con maquina o afeitadora, bien al ras. No uses cera ni pinza. Llega con la piel limpia y sin cremas. No tomar sol 24 hs antes ni después de la sesión.';
 
     const waMsg = encodeURIComponent(`Hola! Quiero consultar sobre depilación láser en ${data.title}.`);
     modalCTA.href = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
