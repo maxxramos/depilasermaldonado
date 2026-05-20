@@ -1460,13 +1460,14 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
     /* Modal from bottom */
     .modal-overlay {
         align-items: flex-end;
-        padding: 0 0 5px;
+        padding: 0 12px 12px;
     }
 
     .modal {
-        border-radius: var(--radius) var(--radius) 0 0;
+        border-radius: var(--radius);
         max-height: 88vh;
         transform: translateY(100%);
+        width: 100%;
     }
 
     .modal-body {
