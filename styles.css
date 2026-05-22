@@ -1176,6 +1176,31 @@ a.contact-card.facebook:hover .contact-btn  { background: #1877F2; color: #fff; 
     color: var(--primary);
 }
 
+.footer-bottom {
+    flex-basis: 100%;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,0.42);
+    font-size: 0.82rem;
+}
+
+.footer-bottom a {
+    color: rgba(255,255,255,0.65);
+    transition: color var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+
 /* ======================== WHATSAPP FAB ======================== */
 .whatsapp-float {
     position: fixed;
