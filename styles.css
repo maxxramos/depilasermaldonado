@@ -308,6 +308,8 @@ ul {
     display: block;
     margin-bottom: 4px;
     letter-spacing: 0.02em;
+    line-height: 1.6;
+    text-transform: none;
 }
 
 .hero h1 {
